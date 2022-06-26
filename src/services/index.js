@@ -7,7 +7,6 @@ const http = axios.create({
   }
 });
 
-
 const getAll = () => {
   return http.get("/tutorials");
 };
@@ -36,7 +35,7 @@ const findByTitle = title => {
   return http.get(`/tutorials?title=${title}`);
 };
 
-const TutorialService = {
+const dataService = {
   getAll,
   get,
   create,
@@ -46,4 +45,4 @@ const TutorialService = {
   findByTitle
 };
 
-export default TutorialService;
+export default dataService;
