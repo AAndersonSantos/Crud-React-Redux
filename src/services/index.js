@@ -35,7 +35,7 @@ const findByTitle = title => {
   return http.get(`/tutorials?title=${title}`);
 };
 
-const dataService = {
+const requestMethod = {
   getAll,
   get,
   create,
@@ -45,4 +45,4 @@ const dataService = {
   findByTitle
 };
 
-export default dataService;
+export default requestMethod;

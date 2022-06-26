@@ -6,11 +6,11 @@ import {
   DELETE_ALL_TUTORIALS,
 } from "./types";
 
-import TutorialDataService from "../services/index";
+import requestMethod from "../services/index";
 
 export const createTutorial = (title, description) => async (dispatch) => {
   try {
-    const res = await TutorialDataService.create({ title, description });
+    const res = await requestMethod.create({ title, description });
 
     dispatch({
       type: CREATE_TUTORIAL,
@@ -25,7 +25,7 @@ export const createTutorial = (title, description) => async (dispatch) => {
 
 export const retrieveTutorials = () => async (dispatch) => {
   try {
-    const res = await TutorialDataService.getAll();
+    const res = await requestMethod.getAll();
 
     dispatch({
       type: RETRIEVE_TUTORIALS,
@@ -38,7 +38,7 @@ export const retrieveTutorials = () => async (dispatch) => {
 
 export const updateTutorial = (id, data) => async (dispatch) => {
   try {
-    const res = await TutorialDataService.update(id, data);
+    const res = await requestMethod.update(id, data);
 
     dispatch({
       type: UPDATE_TUTORIAL,
@@ -53,7 +53,7 @@ export const updateTutorial = (id, data) => async (dispatch) => {
 
 export const deleteTutorial = (id) => async (dispatch) => {
   try {
-    await TutorialDataService.remove(id);
+    await requestMethod.remove(id);
 
     dispatch({
       type: DELETE_TUTORIAL,
@@ -66,7 +66,7 @@ export const deleteTutorial = (id) => async (dispatch) => {
 
 export const deleteAllTutorials = () => async (dispatch) => {
   try {
-    const res = await TutorialDataService.removeAll();
+    const res = await requestMethod.removeAll();
 
     dispatch({
       type: DELETE_ALL_TUTORIALS,
@@ -81,7 +81,7 @@ export const deleteAllTutorials = () => async (dispatch) => {
 
 export const findTutorialsByTitle = (title) => async (dispatch) => {
   try {
-    const res = await TutorialDataService.findByTitle(title);
+    const res = await requestMethod.findByTitle(title);
 
     dispatch({
       type: RETRIEVE_TUTORIALS,
