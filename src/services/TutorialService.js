@@ -1,4 +1,12 @@
-import http from "../http-common";
+import axios from "axios";
+
+const http = axios.create({
+  baseURL: "http://localhost:3000/api",
+  headers: {
+    "Content-type": "application/json"
+  }
+});
+
 
 const getAll = () => {
   return http.get("/tutorials");
