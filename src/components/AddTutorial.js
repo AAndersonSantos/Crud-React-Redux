@@ -3,44 +3,45 @@ import { useDispatch } from "react-redux";
 import { createTutorial } from "../applicationActions/actions";
 
 const AddTutorial = () => {
-  const initialTutorialState = {
+  const [initialState, setInitialState] = useState({
     id: null,
     title: "",
     description: "",
     published: false
-  };
-  const [tutorial, setTutorial] = useState(initialTutorialState);
-  const [submitted, setSubmitted] = useState(false);
+  });
 
+  const [submitted, setSubmitted] = useState(false);
   const dispatch = useDispatch();
 
-  const handleInputChange = event => {
-    const { name, value } = event.target;
-    setTutorial({ ...tutorial, [name]: value });
+  function handleInputChange(event) {
+    setInitialState({ ...initialState, [event.target.name]: event.target.value });
   };
 
-  const saveTutorial = () => {
-    const { title, description } = tutorial;
+  function saveTutorial() {
+    const { title, description } = initialState;
 
-    dispatch(createTutorial(title, description))
-      .then(data => {
-        setTutorial({
-          id: data.id,
-          title: data.title,
-          description: data.description,
-          published: data.published
-        });
-        setSubmitted(true);
-
-        console.log(data);
-      })
+    dispatch(createTutorial(title, description)).then(data => {
+      setInitialState({
+        id: data.id,
+        title: data.title,
+        description: data.description,
+        published: data.published
+      });
+      setSubmitted(true);
+      console.log(data);
+    })
       .catch(e => {
         console.log(e);
       });
   };
 
-  const newTutorial = () => {
-    setTutorial(initialTutorialState);
+  function newTutorial() {
+    setInitialState({
+      id: null,
+      title: "",
+      description: "",
+      published: false
+    });
     setSubmitted(false);
   };
 
@@ -49,9 +50,7 @@ const AddTutorial = () => {
       {submitted ? (
         <div>
           <h4>You submitted successfully!</h4>
-          <button className="btn btn-success" onClick={newTutorial}>
-            Add
-          </button>
+          <button className="btn btn-success" onClick={newTutorial}>Add</button>
         </div>
       ) : (
         <div>
@@ -62,7 +61,7 @@ const AddTutorial = () => {
               className="form-control"
               id="title"
               required
-              value={tutorial.title}
+              value={initialState.title}
               onChange={handleInputChange}
               name="title"
             />
@@ -75,15 +74,12 @@ const AddTutorial = () => {
               className="form-control"
               id="description"
               required
-              value={tutorial.description}
+              value={initialState.description}
               onChange={handleInputChange}
               name="description"
             />
           </div>
-
-          <button onClick={saveTutorial} className="btn btn-success">
-            Submit
-          </button>
+          <button onClick={saveTutorial} className="btn btn-success">Submit</button>
         </div>
       )}
     </div>

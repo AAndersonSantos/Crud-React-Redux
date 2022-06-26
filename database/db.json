@@ -1,15 +1,9 @@
 {
   "tutorials": [
     {
-      "id": 1,
-      "title": "Anderson Santos",
-      "description": "Curso JavaScript 180Hrs",
-      "published": true
-    },
-    {
       "id": 2,
       "title": "Leanne Graham",
-      "description": "Curso Angular 2",
+      "description": "Curso NodeJs",
       "published": true
     },
     {
