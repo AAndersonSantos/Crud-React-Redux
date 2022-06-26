@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import tutorials from "./tutorials";
+import tutorials from "./reducers";
 
 export default combineReducers({
   tutorials,

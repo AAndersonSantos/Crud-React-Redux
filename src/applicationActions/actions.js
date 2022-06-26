@@ -4,7 +4,7 @@ import {
   UPDATE_TUTORIAL,
   DELETE_TUTORIAL,
   DELETE_ALL_TUTORIALS,
-} from "./types";
+} from "../applicationActionsTypes/types";
 
 import requestMethod from "../services/index";
 

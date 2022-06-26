@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { updateTutorial, deleteTutorial } from "../actions/tutorials";
+import { updateTutorial, deleteTutorial } from "../applicationActions/actions";
 import TutorialDataService from "../services/index";
 
 const Tutorial = (props) => {
