@@ -6,6 +6,7 @@ import "./App.css";
 import AddTutorial from "./components/AddTutorial";
 import Tutorial from "./components/Tutorial";
 import TutorialsList from "./components/TutorialsList";
+import TeacherList from "./components/componentTeachersList";
 
 function App() {
   return (
@@ -25,6 +26,11 @@ function App() {
               Add
             </Link>
           </li>
+          <li className="nav-item">
+            <Link to={"/teachers"} className="nav-link">
+              Teachers
+            </Link>
+          </li>
         </div>
       </nav>
 
@@ -32,6 +38,7 @@ function App() {
         <Switch>
           <Route exact path={["/", "/tutorials"]} component={TutorialsList} />
           <Route exact path="/add" component={AddTutorial} />
+          <Route exact path="/teachers" component={TeacherList} />
           <Route path="/tutorials/:id" component={Tutorial} />
         </Switch>
       </div>

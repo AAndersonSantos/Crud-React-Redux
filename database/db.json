@@ -18,5 +18,22 @@
       "description": "Curso PL/SQL",
       "published": true
     }
+  ],
+  "teachers": [
+    {
+      "id": 1,
+      "name": "Leanne Graham",
+      "published": true
+    },
+    {
+      "id": 2,
+      "name": "Jhon Doe",
+      "published": true
+    },
+    {
+      "id": 3,
+      "name": "Ervin Howell",
+      "published": true
+    }
   ]
 }

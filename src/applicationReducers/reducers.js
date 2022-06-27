@@ -4,6 +4,7 @@ import {
   UPDATE_TUTORIAL,
   DELETE_TUTORIAL,
   DELETE_ALL_TUTORIALS,
+  GET_ALL_TEACHERS
 } from "../applicationActionsTypes/types";
 
 const initialState = [];
@@ -16,6 +17,9 @@ const tutorialReducer = (tutorials = initialState, action) => {
       return [...tutorials, payload];
 
     case RETRIEVE_TUTORIALS:
+      return payload;
+    
+    case GET_ALL_TEACHERS:
       return payload;
 
     case UPDATE_TUTORIAL:

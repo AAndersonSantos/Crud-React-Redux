@@ -11,6 +11,10 @@ const getAll = () => {
   return http.get("/tutorials");
 };
 
+const getAllTeachers = () => {
+  return http.get("/teachers");
+};
+
 const get = id => {
   return http.get(`/tutorials/${id}`);
 };
@@ -37,6 +41,7 @@ const findByTitle = title => {
 
 const requestMethod = {
   getAll,
+  getAllTeachers,
   get,
   create,
   update,

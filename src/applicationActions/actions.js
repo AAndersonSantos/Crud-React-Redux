@@ -4,6 +4,7 @@ import {
   UPDATE_TUTORIAL,
   DELETE_TUTORIAL,
   DELETE_ALL_TUTORIALS,
+  GET_ALL_TEACHERS
 } from "../applicationActionsTypes/types";
 
 import requestMethod from "../services/index";
@@ -85,6 +86,20 @@ export const findTutorialsByTitle = (title) => async (dispatch) => {
 
     dispatch({
       type: RETRIEVE_TUTORIALS,
+      payload: res.data,
+    });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+//Get all teachers
+export const getAllTeachers = () => async (dispatch) => {
+  try {
+    const res = await requestMethod.getAllTeachers();
+
+    dispatch({
+      type: GET_ALL_TEACHERS,
       payload: res.data,
     });
   } catch (err) {
