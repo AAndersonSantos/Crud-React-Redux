@@ -4,7 +4,7 @@ import {
   retrieveTutorials,
   findTutorialsByTitle,
   deleteAllTutorials,
-} from "../applicationActions/actions";
+} from "../applicationActions/tutorialActions";
 import { Link } from "react-router-dom";
 
 const TutorialsList = () => {
@@ -17,7 +17,7 @@ const TutorialsList = () => {
 
   useEffect(() => {
     dispatch(retrieveTutorials());
-  }, []);
+  }, [ dispatch ]);
 
   const onChangeSearchTitle = e => {
     const searchTitle = e.target.value;
@@ -78,10 +78,7 @@ const TutorialsList = () => {
         <ul className="list-group">
           {tutorials &&
             tutorials.map((tutorial, index) => (
-              <li
-                className={
-                  "list-group-item " + (index === currentIndex ? "active" : "")
-                }
+              <li className={ "list-group-item " + (index === currentIndex ? "active" : "")}
                 onClick={() => setActiveTutorial(tutorial, index)}
                 key={index}
               >

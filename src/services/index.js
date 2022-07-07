@@ -7,12 +7,9 @@ const http = axios.create({
   }
 });
 
+// http tutorial
 const getAll = () => {
   return http.get("/tutorials");
-};
-
-const getAllTeachers = () => {
-  return http.get("/teachers");
 };
 
 const get = id => {
@@ -39,9 +36,19 @@ const findByTitle = title => {
   return http.get(`/tutorials?title=${title}`);
 };
 
+// Http teachers
+const getAllTeachers = () => {
+  return http.get("/teachers");
+};
+
+const removeAllTeachers = () => {
+  return http.delete("/teachers");
+};
+
 const requestMethod = {
   getAll,
   getAllTeachers,
+  removeAllTeachers,
   get,
   create,
   update,
