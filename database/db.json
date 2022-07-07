@@ -1,0 +1,39 @@
+{
+  "tutorials": [
+    {
+      "id": 2,
+      "title": "Leanne Graham",
+      "description": "Curso NodeJs",
+      "published": true
+    },
+    {
+      "id": 3,
+      "title": "Jhon Doe",
+      "description": "tutorials NodeJs",
+      "published": true
+    },
+    {
+      "id": 4,
+      "title": "Ervin Howell",
+      "description": "Curso PL/SQL",
+      "published": true
+    }
+  ],
+  "teachers": [
+    {
+      "id": 1,
+      "name": "Leanne Graham",
+      "published": true
+    },
+    {
+      "id": 2,
+      "name": "Jhon Doe",
+      "published": true
+    },
+    {
+      "id": 3,
+      "name": "Ervin Howell",
+      "published": true
+    }
+  ]
+}
