@@ -28,10 +28,6 @@ const remove = id => {
   return http.delete(`/tutorials/${id}`);
 };
 
-const removeAll = () => {
-  return http.delete(`/tutorials`);
-};
-
 const findByTitle = title => {
   return http.get(`/tutorials?title=${title}`);
 };
@@ -41,19 +37,13 @@ const getAllTeachers = () => {
   return http.get("/teachers");
 };
 
-const removeAllTeachers = () => {
-  return http.delete("/teachers");
-};
-
 const requestMethod = {
   getAll,
   getAllTeachers,
-  removeAllTeachers,
   get,
   create,
   update,
   remove,
-  removeAll,
   findByTitle
 };
 

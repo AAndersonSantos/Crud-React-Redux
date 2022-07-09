@@ -3,7 +3,6 @@ import {
   RETRIEVE_TUTORIALS,
   UPDATE_TUTORIAL,
   DELETE_TUTORIAL,
-  DELETE_ALL_TUTORIALS
 } from "../applicationActionsTypes/types";
 
 import requestMethod from "../services/index";
@@ -61,21 +60,6 @@ export const deleteTutorial = (id) => async (dispatch) => {
     });
   } catch (err) {
     console.log(err);
-  }
-};
-
-export const deleteAllTutorials = () => async (dispatch) => {
-  try {
-    const res = await requestMethod.removeAll();
-
-    dispatch({
-      type: DELETE_ALL_TUTORIALS,
-      payload: res.data,
-    });
-
-    return Promise.resolve(res.data);
-  } catch (err) {
-    return Promise.reject(err);
   }
 };
 

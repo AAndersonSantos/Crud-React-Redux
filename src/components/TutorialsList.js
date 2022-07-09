@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   retrieveTutorials,
   findTutorialsByTitle,
-  deleteAllTutorials,
 } from "../applicationActions/tutorialActions";
 import { Link } from "react-router-dom";
 
@@ -32,17 +31,6 @@ const TutorialsList = () => {
   const setActiveTutorial = (tutorial, index) => {
     setCurrentTutorial(tutorial);
     setCurrentIndex(index);
-  };
-
-  const removeAllTutorials = () => {
-    dispatch(deleteAllTutorials())
-      .then(response => {
-        console.log(response);
-        refreshData();
-      })
-      .catch(e => {
-        console.log(e);
-      });
   };
 
   const findByTitle = () => {
@@ -87,12 +75,6 @@ const TutorialsList = () => {
             ))}
         </ul>
 
-        <button
-          className="m-3 btn btn-sm btn-danger"
-          onClick={removeAllTutorials}
-        >
-          Remove All
-        </button>
       </div>
       <div className="col-md-6">
         {currentTutorial ? (
