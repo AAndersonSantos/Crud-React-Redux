@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
@@ -35,13 +35,13 @@ function App() {
       </nav>
 
       <div className="container mt-3">
-        <Routes>
-          <Route exact path="/" element={<TutorialsList />} />
-          <Route exact path="/tutorials" element={<TutorialsList />} />
-          <Route exact path="/add" element={<AddTutorial />} />
-          <Route exact path="/teachers" element={<TeacherList />} />
-          <Route path="/tutorials/:id" element={<Tutorial />} />
-        </Routes>
+        <Switch>
+          <Route exact path="/" component={TutorialsList} />
+          <Route exact path="/tutorials" component={TutorialsList} />
+          <Route exact path="/add" component={AddTutorial} />
+          <Route exact path="/teachers" component={TeacherList} />
+          <Route path="/tutorials/:id" component={Tutorial} />
+        </Switch>
       </div>
     </Router>
   );
