@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   retrieveTutorials,
   findTutorialsByTitle,
-} from "../applicationActions/tutorialActions";
-import { Link } from "react-router-dom";
+} from "../../applicationActions/tutorialActions";
+import { Link, useNavigate } from "react-router-dom";
 
 const TutorialsList = () => {
   const [currentTutorial, setCurrentTutorial] = useState(null);
@@ -13,6 +13,12 @@ const TutorialsList = () => {
 
   const tutorials = useSelector(state => state.tutorials);
   const dispatch = useDispatch();
+
+  let navigate = useNavigate()
+
+  function add() {
+    navigate(`/add`)
+  }
 
   useEffect(() => {
     dispatch(retrieveTutorials());
@@ -74,7 +80,7 @@ const TutorialsList = () => {
               </li>
             ))}
         </ul>
-
+        <button className="m-3 btn btn-success" onClick={add}> Adicionar </button>
       </div>
       <div className="col-md-6">
         {currentTutorial ? (

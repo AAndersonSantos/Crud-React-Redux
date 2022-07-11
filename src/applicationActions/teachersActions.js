@@ -1,5 +1,5 @@
 import { GET_ALL_TEACHERS } from "../applicationActionsTypes/types";
-import requestMethod from "../services/index";
+import requestMethod from "../services/serviceTeachers/index";
 
 //Get all teachers
 export const getAllTeachers = () => async (dispatch) => {

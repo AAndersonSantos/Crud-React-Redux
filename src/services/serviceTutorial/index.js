@@ -32,14 +32,9 @@ const findByTitle = title => {
   return http.get(`/tutorials?title=${title}`);
 };
 
-// Http teachers
-const getAllTeachers = () => {
-  return http.get("/teachers");
-};
 
 const requestMethod = {
   getAll,
-  getAllTeachers,
   get,
   create,
   update,

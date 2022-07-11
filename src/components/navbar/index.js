@@ -14,11 +14,6 @@ function NavBar(){
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to={"/add"} className="nav-link">
-              Add
-            </NavLink>
-          </li>
-          <li className="nav-item">
             <NavLink to={"/teachers"} className="nav-link">
               Teachers
             </NavLink>

@@ -5,7 +5,7 @@ import {
   DELETE_TUTORIAL,
 } from "../applicationActionsTypes/types";
 
-import requestMethod from "../services/index";
+import requestMethod from "../services/serviceTutorial/index";
 
 export const createTutorial = (title, description) => async (dispatch) => {
   try {

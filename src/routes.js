@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from "./components/navbar";
 import AddTutorial from "./components/AddTutorial";
 import Tutorial from "./components/Tutorial";
-import TutorialsList from "./components/TutorialsList";
-import TeacherList from "./components/componentTeachersList";
+import TutorialsList from "./pages/tutorials/TutorialsList";
+import TeacherList from "./pages/teachers";
 
 function Routers() {
     return (
