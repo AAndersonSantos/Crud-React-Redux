@@ -5,6 +5,7 @@ import {
   findTutorialsByTitle,
 } from "../../applicationActions/tutorialActions";
 import { Link, useNavigate } from "react-router-dom";
+import Modal from '../../components/modalTutorials/index'
 
 const TutorialsList = () => {
   const [currentTutorial, setCurrentTutorial] = useState(null);
@@ -37,6 +38,7 @@ const TutorialsList = () => {
   const setActiveTutorial = (tutorial, index) => {
     setCurrentTutorial(tutorial);
     setCurrentIndex(index);
+    console.log(currentTutorial)
   };
 
   const findByTitle = () => {
@@ -56,13 +58,7 @@ const TutorialsList = () => {
             onChange={onChangeSearchTitle}
           />
           <div className="input-group-append">
-            <button
-              className="btn btn-outline-secondary"
-              type="button"
-              onClick={findByTitle}
-            >
-              Search
-            </button>
+            <button className="btn btn-outline-secondary" type="button" onClick={findByTitle}> Search </button>
           </div>
         </div>
       </div>
@@ -80,7 +76,7 @@ const TutorialsList = () => {
               </li>
             ))}
         </ul>
-        <button className="m-3 btn btn-success" onClick={add}> Adicionar </button>
+        <div onClick={refreshData}> <Modal /> </div>
       </div>
       <div className="col-md-6">
         {currentTutorial ? (

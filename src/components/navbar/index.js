@@ -18,6 +18,11 @@ function NavBar(){
               Teachers
             </NavLink>
           </li>
+          <li className="nav-item">
+            <NavLink to={"/students"} className="nav-link">
+              Students
+            </NavLink>
+          </li>
         </div>
       </nav>
     )

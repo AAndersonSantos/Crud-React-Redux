@@ -5,6 +5,7 @@ import AddTutorial from "./components/AddTutorial";
 import Tutorial from "./components/Tutorial";
 import TutorialsList from "./pages/tutorials/TutorialsList";
 import TeacherList from "./pages/teachers";
+import Students from "./pages/students"
 
 function Routers() {
     return (
@@ -16,6 +17,7 @@ function Routers() {
                     <Route exact path="/tutorials" element={ <TutorialsList /> } />
                     <Route exact path="/add" element={ <AddTutorial /> } />
                     <Route exact path="/teachers" element={ <TeacherList /> } />
+                    <Route exact path="/students" element={ <Students /> } />
                     <Route path="/tutorials/:id" element={ <Tutorial /> } />
                 </Routes>
             </div>
