@@ -41,5 +41,31 @@
       "name": "Ervin Howell",
       "published": true
     }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "name": "Leanne Graham",
+      "country": "Brasil",
+      "state": "São Paulo",
+      "date_Birth": "1991-04-23",
+      "published": true
+    },
+    {
+      "id": 2,
+      "name": "Jhon Doe",
+      "country": "Brasil",
+      "state": "Rio de janeiro",
+      "date_Birth": "1988-07-12",
+      "published": true
+    },
+    {
+      "id": 3,
+      "name": "Ervin Howell",
+      "country": "EUA",
+      "state": "Londres",
+      "date_Birth": "1997-01-10",
+      "published": true
+    }
   ]
 }

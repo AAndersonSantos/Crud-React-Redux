@@ -1,7 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
-import AddTutorial from '../AddTutorial';
-import "./styleModalTutorials.css"
+import "./styleModalStudents.css"
 
 const customStyles = {
     content: {
@@ -37,7 +36,6 @@ function ComponentModal() {
                 style={customStyles}
                 contentLabel="Example Modal">
                 <button className='btn-fechar' onClick={closeModal}>X</button>
-                < AddTutorial />
             </Modal>
         </div>
     );

@@ -6,3 +6,6 @@ export const DELETE_TUTORIAL = "DELETE_TUTORIAL";
 
 // Types Teachers
 export const GET_ALL_TEACHERS = "GET_ALL_TEACHERS";
+
+// Types Students
+export const GET_ALL_STUDENTS = "GET_ALL_STUDENTS";
