@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { createTutorial } from "../applicationActions/tutorialActions";
+import { createTutorial } from "../../applicationActions/tutorialActions";
 
 const AddTutorial = () => {
   const [initialState, setInitialState] = useState({
@@ -47,7 +47,7 @@ const AddTutorial = () => {
 
   return (
     <div className="submit-form">
-      {submitted ? (
+      {submitted === true ? (
         <div>
           <h4>You submitted successfully!</h4>
           <button className="btn btn-success" onClick={newTutorial}>Add</button>

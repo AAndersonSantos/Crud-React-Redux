@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import AddStudents from '../formAdd/addStudents';
 import "./styleModalStudents.css"
 
 const customStyles = {
@@ -36,6 +37,7 @@ function ComponentModal() {
                 style={customStyles}
                 contentLabel="Example Modal">
                 <button className='btn-fechar' onClick={closeModal}>X</button>
+                < AddStudents />
             </Modal>
         </div>
     );

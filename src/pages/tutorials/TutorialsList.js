@@ -4,7 +4,7 @@ import {
   retrieveTutorials,
   findTutorialsByTitle,
 } from "../../applicationActions/tutorialActions";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Modal from '../../components/modalTutorials/index'
 
 const TutorialsList = () => {
@@ -14,12 +14,6 @@ const TutorialsList = () => {
 
   const tutorials = useSelector(state => state.tutorials);
   const dispatch = useDispatch();
-
-  let navigate = useNavigate()
-
-  function add() {
-    navigate(`/add`)
-  }
 
   useEffect(() => {
     dispatch(retrieveTutorials());

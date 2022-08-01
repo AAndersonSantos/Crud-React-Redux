@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
-import AddTutorial from '../AddTutorial';
+import AddTutorial from '../formAdd/AddTutorial';
 import "./styleModalTutorials.css"
 
 const customStyles = {

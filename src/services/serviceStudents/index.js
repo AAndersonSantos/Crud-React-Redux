@@ -11,8 +11,13 @@ const getAllStudents = () => {
   return http.get("/students");
 };
 
+const createStudents = data => {
+  return http.post("/students", data);
+};
+
 const requestMethod = {
     getAllStudents,
+    createStudents
 };
 
 export default requestMethod;

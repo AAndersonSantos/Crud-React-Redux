@@ -1,5 +1,5 @@
 import {
-    GET_ALL_STUDENTS,
+    GET_ALL_STUDENTS, CREATE_STUDENTS
   } from "../applicationActionsTypes/types";
   
   const initialState = [];
@@ -8,6 +8,10 @@ import {
     const { type, payload } = action;
   
     switch (type) {
+
+      case CREATE_STUDENTS:
+      return [...students, payload];
+
       case GET_ALL_STUDENTS:
         return payload;
   

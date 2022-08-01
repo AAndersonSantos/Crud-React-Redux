@@ -9,3 +9,4 @@ export const GET_ALL_TEACHERS = "GET_ALL_TEACHERS";
 
 // Types Students
 export const GET_ALL_STUDENTS = "GET_ALL_STUDENTS";
+export const CREATE_STUDENTS = "CREATE_STUDENTS";

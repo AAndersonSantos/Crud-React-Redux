@@ -1,7 +1,7 @@
-import { GET_ALL_STUDENTS } from "../applicationActionsTypes/types";
+import { GET_ALL_STUDENTS, CREATE_STUDENTS } from "../applicationActionsTypes/types";
 import requestMethod from "../services/serviceStudents/index";
 
-//Get all teachers
+//Get all students
 export const getAllStudents = () => async (dispatch) => {
     try {
       const res = await requestMethod.getAllStudents();
@@ -14,3 +14,19 @@ export const getAllStudents = () => async (dispatch) => {
       console.log(err);
     }
   };
+
+//Create students
+export const createStudents = (name, country, state, date_Birth) => async (dispatch) => {
+  try {
+    const res = await requestMethod.createStudents({ name, country, state, date_Birth });
+
+    dispatch({
+      type: CREATE_STUDENTS,
+      payload: res.data,
+    });
+
+    return Promise.resolve(res.data);
+  } catch (err) {
+    return Promise.reject(err);
+  }
+};
