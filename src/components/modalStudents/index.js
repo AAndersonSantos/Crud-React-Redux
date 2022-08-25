@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
-import AddStudents from '../formAdd/addStudents';
-import "./styleModalStudents.css"
+import AddStudents from '../formAdd/formStudents/addStudents';
+import "./styleModalStudents.scss"
 
 const customStyles = {
     content: {
@@ -11,6 +11,10 @@ const customStyles = {
         bottom: 'auto',
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
+        width: '35%',
+        height: '95%',
+        border: '1px solid #ccc',
+        borderRadius: '0.3rem',
     },
 };
 
@@ -29,7 +33,7 @@ function ComponentModal() {
     }
 
     return (
-        <div>
+        <div className='modal-students'>
             <button className="m-3 btn btn-success" onClick={openModal}><span>Add</span></button>
             <Modal
                 isOpen={modalIsOpen}

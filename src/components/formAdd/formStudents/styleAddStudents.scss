@@ -1,0 +1,71 @@
+.submit-form-students{
+
+    h1{
+        font-size: 40px;
+        margin-left: 100px;
+        width: 310px;
+        margin-top: -20px;
+    }
+    
+    .form-input{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .form-name{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+
+            .input-name{
+                width: 60%;
+            }
+        }
+
+        .label-date-Birth{
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+
+            .input-date{
+                width: 35%;
+            }
+        }
+    
+        .container-select{
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+
+            .label-state{
+                display: flex;
+                flex-direction: column;
+    
+                .select-state{
+                    height: 30px;
+                    width: 200px;
+                }
+            }
+            
+            .label-city{
+                display: flex;
+                flex-direction: column;
+                margin-left: 40px;
+    
+                .select-city{
+                    height: 30px;
+                    width: 200px;
+                }
+            }
+        }
+        
+        .btn{
+            margin-top: 210px;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+}

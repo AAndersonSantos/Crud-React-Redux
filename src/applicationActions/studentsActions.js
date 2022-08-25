@@ -16,9 +16,9 @@ export const getAllStudents = () => async (dispatch) => {
   };
 
 //Create students
-export const createStudents = (name, country, state, date_Birth) => async (dispatch) => {
+export const createStudents = (name, state, city, date_Birth) => async (dispatch) => {
   try {
-    const res = await requestMethod.createStudents({ name, country, state, date_Birth });
+    const res = await requestMethod.createStudents({ name, state, city, date_Birth });
 
     dispatch({
       type: CREATE_STUDENTS,

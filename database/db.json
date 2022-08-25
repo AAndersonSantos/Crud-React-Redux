@@ -44,28 +44,32 @@
   ],
   "students": [
     {
-      "id": 1,
+      "name": "Anderson Santos",
+      "state": "SP",
+      "city": "Itapevi",
+      "date_Birth": "1994-09-19",
+      "id": 4
+    },
+    {
       "name": "Leanne Graham",
-      "country": "Brasil",
-      "state": "São Paulo",
-      "date_Birth": "1991-04-23",
-      "published": true
+      "state": "AM",
+      "city": "Fonte Boa",
+      "date_Birth": "1990-07-09",
+      "id": 5
     },
     {
-      "id": 2,
       "name": "Jhon Doe",
-      "country": "Brasil",
-      "state": "Rio de janeiro",
-      "date_Birth": "1988-07-12",
-      "published": true
+      "state": "MG",
+      "city": "Uberlândia",
+      "date_Birth": "2000-01-20",
+      "id": 6
     },
     {
-      "id": 3,
-      "name": "Ervin Howell",
-      "country": "EUA",
-      "state": "Londres",
-      "date_Birth": "1997-01-10",
-      "published": true
+      "name": "Mariana Hill",
+      "state": "SC",
+      "city": "Nova Veneza",
+      "date_Birth": "1986-08-22",
+      "id": 7
     }
   ]
 }

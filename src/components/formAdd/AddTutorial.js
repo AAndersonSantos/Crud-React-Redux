@@ -46,7 +46,7 @@ const AddTutorial = () => {
   };
 
   return (
-    <div className="submit-form">
+    <div className="submit-form-tutorial">
       {submitted === true ? (
         <div>
           <h4>You submitted successfully!</h4>
