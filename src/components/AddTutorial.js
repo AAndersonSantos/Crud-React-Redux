@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { createTutorial } from "../actions/tutorials";
+import {
+    createTutorial
+  } from "../slices/tutorials";
 
 const AddTutorial = () => {
   const initialTutorialState = {
@@ -31,7 +33,6 @@ const AddTutorial = () => {
           published: data.published
         });
         setSubmitted(true);
-
         console.log(data);
       })
       .catch(e => {

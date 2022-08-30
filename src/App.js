@@ -2,10 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-
-import AddTutorial from "./components/AddTutorial";
-import Tutorial from "./components/Tutorial";
 import TutorialsList from "./components/TutorialsList";
+import AddTutorial from "./components/addTutorial";
 
 function App() {
   return (
@@ -32,7 +30,6 @@ function App() {
         <Switch>
           <Route exact path={["/", "/tutorials"]} component={TutorialsList} />
           <Route exact path="/add" component={AddTutorial} />
-          <Route path="/tutorials/:id" component={Tutorial} />
         </Switch>
       </div>
     </Router>
